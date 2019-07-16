@@ -7,8 +7,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-bin/console
-symfony.lock
 
 ###> symfony/web-server-bundle ###
 /.web-server-pid
