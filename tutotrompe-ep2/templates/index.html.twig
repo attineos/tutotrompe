@@ -1,0 +1,22 @@
+{# templates/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Tutotrompe{% endblock %}
+
+{% block body %}
+    <div class="centered">
+        <img src="{{ absolute_url(asset('/img/logo_rond.png')) }}" />
+        <br />
+        {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a href="{{ path('app_login') }}">Connexion</a>
+        {% endif %}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {{ app.user.email }}
+            <br />
+            <a href="{{ path('protected') }}">Lien nécessitant d'être authentifié</a> -
+            <a href="{{ path('admin') }}">Lien nécessitant d'être admin</a>
+            <br />
+            <a href="{{ path('app_logout') }}">Déconnexion</a>
+        {% endif %}
+    </div>
+{% endblock %}

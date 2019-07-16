@@ -1,0 +1,14 @@
+{# templates/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Tutotrompe{% endblock %}
+
+{% block body %}
+    <div class="centered">
+        <img src="{{ absolute_url(asset('/img/logo_rond.png')) }}" />
+        <br />
+        <h2>Admin</h2>
+        <br />
+        <a href="{{ path('home') }}">Retour</a>
+    </div>
+{% endblock %}
