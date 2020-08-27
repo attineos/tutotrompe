@@ -22,8 +22,7 @@ module.exports = () => {
       hot: true,
       https: true,
       port: 8001,
-      proxy: {
-      },
+      proxy: {},
     },
   }
 }

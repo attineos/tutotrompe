@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf build && cross-env NODE_ENV=production webpack --config webpack/base.config.babel.js",
     "start": "cross-env NODE_ENV=dev webpack-dev-server --config webpack/base.config.babel.js --dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier": "prettier --write \"{webpack,src}/**/*.?(js|?(s)css|json)\""
   },
   "author": "Thomas Capet",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "babel-plugin-styled-components": "^1.11.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "cross-env": "^7.0.2",
+    "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
