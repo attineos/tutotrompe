@@ -1,0 +1,34 @@
+{
+  "name": "microfrontend",
+  "version": "1.0.0",
+  "description": "A mciro frontend example",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf build && cross-env NODE_ENV=production webpack --config webpack/base.config.babel.js",
+    "start": "cross-env NODE_ENV=dev webpack-dev-server --config webpack/base.config.babel.js --dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Capet",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^5.1.2"
+  }
+}
